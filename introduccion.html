@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Introduccion | B-ARBOLES </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Javier David Vichez Guerra" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.3.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">B-ARBOLES</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Presentacion</a></li>
+   <li class="current-page-parent"><a href="objetivos.html" class="current-page-parent daddy">Objetivos</a>
+   <ul>
+      <li class="current-page-parent"><a href="metodologia.html" class="current-page-parent daddy">Metodologia</a>
+      <ul>
+         <li class="current-page-parent"><a href="contenido.html" class="current-page-parent daddy">Contenido</a>
+         <ul>
+            <li id="active"><a href="introduccion.html" class="active daddy">Introduccion</a>
+            <ul>
+               <li><a href="definicion.html" class="daddy">Definicion</a>
+               <ul class="other-section">
+                  <li><a href="bsqueda_en_un_brbol.html" class="daddy">Búsqueda en un b-árbol</a>
+                  <ul class="other-section">
+                     <li><a href="insercin_en_un__brbol.html" class="no-ch">Inserción en un  b-árbol</a></li>
+                     <li><a href="borrado_en_un_brbol.html" class="no-ch">Borrado en un b-árbol</a></li>
+                     <li><a href="primitivas_en_un_brbol.html" class="daddy">Primitivas en un b-árbol</a>
+                     <ul class="other-section">
+                        <li><a href="autoevaluacion.html" class="daddy">Autoevaluacion</a>
+                        <ul class="other-section">
+                           <li><a href="creditos.html" class="no-ch">Creditos</a></li>
+                        </ul>
+                        </li>
+                     </ul>
+                     </li>
+                  </ul>
+                  </li>
+               </ul>
+               </li>
+            </ul>
+            </li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="contenido.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="definicion.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Introduccion</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id175">
+<div class="iDevice emphasis0">
+<div id="ta175_85" class="block iDevice_content">
+<p style="text-align: justify;"></p>
+<div class="exe-fx exe-tabs">
+<h2><em>Introduccion</em></h2>
+<p>Los B-árboles sugieron en 1972 creados por R.Bayer y E.<span style="font-size: 13.12px;">McCreight</span><span style="font-size: 0.82em;">.</span></p>
+<p><img src="img1.jpeg" alt="Resultado de imagen para R.Bayer" /> </p>
+<p>El problema original comienza con la necesidad de mantener índices en almacenamiento externo para acceso a bases de datos,es decir,con el grave problema de la lentitud de estos dispositivos se pretende aprovechar la gran capacidad de almacenamiento para mantener una cantidad de información muy alta organizada de forma que el acceso a una clave sea lo más rápido posible.</p>
+<p>Como se ha visto anteriormente existen métodos y estructuras de datos que permiten realizar una búsqueda dentro de un conjunto alto de datos en un tiempo de orden<span> </span><i>O(log<sub>2</sub>n)</i>. Así tenemos el caso de los árboles binarios AVL.¿Por qué no usarlos para organizar a través de ellos el índice de una base de datos?la respuesta aparece si estudiamos más de cerca el problema de acceso a memoria externa.Mientras que en memoria interna el tiempo de acceso a<span> </span><i>n</i><span> </span>datos situados en distintas partes de la memoria es independiente de las direcciones que estos ocupen(<i>n*cte</i><span> </span>donde<span> </span><i>cte</i><span> </span>es el tiempo de acceso a 1 dato),en memoria externa es fundamental el acceder a datos situados en el mismo bloque para hacer que el tiempo de ejecución disminuya debido a que el tiempo depende fuertemente del tiempo de acceso del dispositivo externo,si disminuimos el número de accesos a disco lógicamente el tiempo resultante de ejecución de nuestra búsqueda se ve fuertemente recortado.Por consiguiente,si tratamos de construir una estructura de datos sobre disco es fundamental tener en cuenta que uno de los factores determinantes en el tiempo de ejecución es el número total de accesos,de forma que aunque dicho n&amp;uacite;mero pueda ser acotado por un orden de eficiencia es muy importante tener en cuenta el número real ya que el tiempo para realizar un acceso es suficientemente alto como para que dos algoritmos pese a tener un mismo orden,puedan tener en un caso un tiempo real de ejecución aceptable y en otro inadmisible.</p>
+<p>De esta forma,si construimos un árbol binario de búsqueda equilibrado en disco,los accesos a disco serán para cargar en memoria uno de los nodos,es decir,para poder llevar a memoria una cantidad de información suficiente como para poder decidir entre dos ramas.Los árboles de múltiples ramas tienen una altura menor que los árboles binarios pues pueden contener más de dos hijos por nodo,además de que puede hacerse corresponder los nodos con las páginas en disco de forma que al realizar un único acceso se leen un número alto de datos que permiten elegir un camino de búsqueda no entre dos ramas,sino en un número considerablemente mayor de ellas.Además,este tipo de árboles hace más fácil y menos costoso conseguir equilibrar el árbol.</p>
+<p>En resumen,los árboles con múltiples hijos hacen que el mantenimiento de índices en memoria externa sea mucho más eficiente y es justamente éste el motivo por el que este tipo de árboles han sido los que tradicionalmente se han usado para el mantenimiento de índices en sistemas de bases de datos.Lógicamente,aunque este tipo de estructuras sean más idóneas para mantener grandes cantidades de datos en almacenamiento externo es posible construirlas de igual forma en memoria principal,y por consiguiente pueden ser mantenidas en memoria (mediante el uso de punteros por ejemplo)al igual que las que hemos estudiado hasta ahora.<span> </span></p>
+<h2>Estructura de datos arboles B</h2>
+<p><video width="320" height="240" controls="controls" class="mediaelement">
+<source src="Estructuras_de_datos__Arboles_B.mp4" type="video/mp4" /></video></p>
+<h2 align="center" style="text-align: center; background: white;"></h2>
+<p style="text-align: justify;"></p>
+</div>
+<div class="exe-fx exe-tabs"></div>
+<div class="exe-fx exe-tabs"></div>
+<p style="text-align: justify;"></p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="contenido.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="definicion.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

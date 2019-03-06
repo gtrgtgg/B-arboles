@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Primitivas en un b-árbol | B-ARBOLES </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Javier David Vichez Guerra" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.3.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">B-ARBOLES</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Presentacion</a></li>
+   <li class="current-page-parent"><a href="objetivos.html" class="current-page-parent daddy">Objetivos</a>
+   <ul>
+      <li class="current-page-parent"><a href="metodologia.html" class="current-page-parent daddy">Metodologia</a>
+      <ul>
+         <li class="current-page-parent"><a href="contenido.html" class="current-page-parent daddy">Contenido</a>
+         <ul>
+            <li class="current-page-parent"><a href="introduccion.html" class="current-page-parent daddy">Introduccion</a>
+            <ul>
+               <li class="current-page-parent"><a href="definicion.html" class="current-page-parent daddy">Definicion</a>
+               <ul>
+                  <li class="current-page-parent"><a href="bsqueda_en_un_brbol.html" class="current-page-parent daddy">Búsqueda en un b-árbol</a>
+                  <ul>
+                     <li><a href="insercin_en_un__brbol.html" class="no-ch">Inserción en un  b-árbol</a></li>
+                     <li><a href="borrado_en_un_brbol.html" class="no-ch">Borrado en un b-árbol</a></li>
+                     <li id="active"><a href="primitivas_en_un_brbol.html" class="active daddy">Primitivas en un b-árbol</a>
+                     <ul>
+                        <li><a href="autoevaluacion.html" class="daddy">Autoevaluacion</a>
+                        <ul class="other-section">
+                           <li><a href="creditos.html" class="no-ch">Creditos</a></li>
+                        </ul>
+                        </li>
+                     </ul>
+                     </li>
+                  </ul>
+                  </li>
+               </ul>
+               </li>
+            </ul>
+            </li>
+         </ul>
+         </li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="borrado_en_un_brbol.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacion.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Primitivas en un b-árbol</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id179">
+<div class="iDevice emphasis0">
+<div id="ta179_85" class="block iDevice_content">
+<div class="exe-fx exe-tabs">
+<pre><b>AB Crear0(int ne)</b><applet align="RIGHT" codebase="../clases" code="proyec.class" name="proyec" width="150" height="40">
+    	
+    	
+   </applet>
+<b>{</b>
+  AB raiz;
+
+  raiz = (AB)malloc(sizeof(struct AB));
+  if (raiz == NULL)
+    error("Memoria Insuficiente.");
+  raiz-&gt;n_etiquetas = ne;
+  for (int i=1; i&lt;=(ne+1); i++) {
+    raiz-&gt;hijos[i] = NULO;
+  }
+  return(raiz);
+<b>}</b>
+
+<b>AB Crear(int ne, int eti[])</b><applet align="RIGHT" codebase="../clases" code="proyec.class" name="proyec" width="150" height="40">
+    	
+    	
+   </applet>
+<b>{</b>
+  AB raiz;
+
+  raiz = (AB)malloc(sizeof(struct AB));
+  if (raiz == NULL)
+    error("Memoria Insuficiente.");
+  raiz-&gt;n_etiquetas = ne;
+  for (int i=1; i&lt;=(ne+1); i++) {
+    raiz-&gt;hijos[i] = NULO;
+  }
+  for (int i=1; i&lt;=lenght(eti[]); i++) {
+    raiz-&gt;etiquetas[i] = eti[i];
+  }
+  return(raiz);
+<b>}</b>
+
+<b>int Buscar(int eti, int *nod, int *pos)</b><applet align="RIGHT" codebase="../clases" code="proyec.class" name="proyec" width="150" height="40">
+    	
+    	
+   </applet>
+<b>{</b>
+  int i,l;
+
+  l = lenght(nod-&gt;etiquetas[]);
+  for(i=0;i<l eti="">nod-&gt;etiquetas[i];i++)
+    ;
+  *pos = i;
+  if(*pos<l eti="nod-">etiquetas[*pos])
+    return 1;
+  else;
+    return 0;
+<b>}</b>
+
+<b>int BuscarNodo(int eti, int *nod, int *pos)</b><applet align="RIGHT" codebase="../clases" code="proyec.class" name="proyec" width="150" height="40">
+    	
+    	
+   </applet>
+<b>{</b>
+  int i=0, enc;
+
+  enc = Buscar(eti,&amp;nod,&amp;pos);
+  if (enc == 1)
+    return 1;
+  do {
+    if (eti<nod->etiquetas[i] &amp;&amp; nod-&gt;hijos[i]!=NULO)
+      enc = BuscarNodo(eti,&amp;nod-&gt;hijos[i],&amp;pos);
+    else
+    if ((eti<nod->etiquetas[i+1]||nod-&gt;etiquetas[i+1]==-1)&amp;&amp;nod-&gt;hijos[i+1]!=-1)
+      enc = BuscarNodo(eti,&amp;nod-&gt;hijos[i+1],&amp;pos);
+    i++;
+  } while (i&lt;lenght(nod-&gt;etiquetas[]) &amp;&amp; enc==0);
+  return (enc);
+<b>}</b>&lt;/lenght(nod-&gt;</nod-></nod-></l></l></pre>
+<p><b><i></i></b></p>
+</div>
+<p style="text-align: justify;"></p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="borrado_en_un_brbol.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacion.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>
